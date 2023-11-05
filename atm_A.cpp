@@ -22,15 +22,15 @@ int main() {
 
     for(int currentIndex = 0; currentIndex < MAX_TRANSACTIONS; currentIndex++) {
         switch (n) {
+
+            
             case 1:
                 cout << "Enter your Deposit amount: ";
                 cin >> deMoney[currentIndex];
 
                 if (deMoney[currentIndex] > 0) {
                     totalAmount += deMoney[currentIndex];
-
                     cout << "You have successfully deposited your money" << endl;
-
                 } else {
                     cout << "Invalid Amount" << endl;
                 }
@@ -38,13 +38,13 @@ int main() {
                 cout << endl;
                 break;
 
+            
             case 2:
                 cout << "Enter your Withdraw amount: ";
                 cin >> wiMoney[currentIndex - 1];
 
                 if (wiMoney[currentIndex - 1] > 0 && (wiMoney[currentIndex - 1] <= totalAmount)) {
                     totalAmount -= wiMoney[currentIndex - 1];
-
                     cout << "You have successfully withdrawn." << endl;
                 } else {
                     cout << "You have insufficient amount." << endl;
@@ -53,13 +53,13 @@ int main() {
                 cout << endl;
                 break;
 
+            
             case 3:
                 cout << "Enter your Transfer amount: ";
                 cin >> trMoney[currentIndex - 2];
 
                 if (trMoney[currentIndex - 2] > 0 && (trMoney[currentIndex - 2] <= totalAmount)) {
                     totalAmount -= trMoney[currentIndex - 2];
-
                     cout << "Your money is transferring..." << endl;
                 } else {
                     cout << "You have insufficient amount." << endl;
@@ -68,6 +68,7 @@ int main() {
                 cout << endl;
                 break;
 
+            
             case 4:
                 if ((deMoney[MAX_TRANSACTIONS] > 0) ||  (wiMoney[MAX_TRANSACTIONS] && wiMoney[MAX_TRANSACTIONS] <= totalAmount) || (trMoney[MAX_TRANSACTIONS] && trMoney[MAX_TRANSACTIONS] <= totalAmount)) {
                     
@@ -75,15 +76,15 @@ int main() {
                             
                         if(deMoney[i] > 0) {
                             cout << "Here is your recent Transactions..." << endl;
-                            cout << i << " Deposit Money: " << deMoney[i] << endl;
+                            cout << " Deposit Money: " << deMoney[i] << endl;
                         }
 
                         if(wiMoney[i] > 0 && wiMoney[i] <= totalAmount) {
-                            cout << i << " Withdraw Money: " << wiMoney[i] << endl;
+                            cout << " Withdraw Money: " << wiMoney[i] << endl;
                         }
 
                         if(trMoney[i] > 0 && trMoney[i] <= totalAmount) {
-                            cout << i << " Transfer Money: " << trMoney[i] << endl << endl;
+                            cout << " Transfer Money: " << trMoney[i] << endl << endl;
                         }
                     }   
                 } else {
@@ -93,19 +94,19 @@ int main() {
                 cout << endl;
                 break;
 
+            
             case 5:
-
                 cout << "Your remaining balance: " << totalAmount << endl << endl;
                 break;
 
+            
             case 6:
-
                 cout << "All Transaction History:" << endl << endl;
 
                     cout << "All Deposit History: " << endl;
                     for(int i = 0; i < MAX_TRANSACTIONS; i++){
                         if (deMoney[i] > 0) {
-                            cout << i << " Deposit Money: " << deMoney[i] << endl;
+                            cout << " Deposit Money: " << deMoney[i] << endl;
                         }
                     }
                     cout << endl;
@@ -113,7 +114,7 @@ int main() {
                     cout << "All Withdraw History: " << endl;
                     for(int i = 0; i < MAX_TRANSACTIONS; i++){
                         if (wiMoney[i] > 0 && wiMoney[i] <= totalAmount) {
-                            cout << i << " Withdraw Money: " << wiMoney[i] << endl;
+                            cout << " Withdraw Money: " << wiMoney[i] << endl;
                         }
                     }
                     cout << endl;
@@ -121,11 +122,9 @@ int main() {
                     cout << "All Transfer History: " << endl;
                     for(int i = 0; i < MAX_TRANSACTIONS; i++){
                         if (trMoney[i] > 0 && trMoney[i] <= totalAmount) {
-                            cout << i << " Transfer Money: " << trMoney[i] << endl;
+                            cout << " Transfer Money: " << trMoney[i] << endl;
                         }
                     }
-                    cout << endl;
-
                 cout << endl;
                 break;
 
