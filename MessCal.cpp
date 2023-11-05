@@ -8,7 +8,7 @@ int main() {
     cin >> n;
     cout << endl;
 
-    string MessMem[n] = {"Arefin", "Soykot", "Zahid", "Sujon", "Fazle", "Zia", "Abid", "Sohan"};
+    string MessMem[n] = {};
 
 
     double IndiMeal[n], TotalMeal = 0;
@@ -17,11 +17,11 @@ int main() {
     double MealRate, GaT, TotalAmount;
 
 
-    /*for(int i = 0; i < n; i++) {
+    for(int i = 0; i < n; i++) {
         cout << "Enter the name of Mess Member " << i+1 << " : ";
         cin >> MessMem[i];
     }
-    cout << endl;*/
+    cout << endl;
 
 
     // \u09F3 is Taka sign; Bangladeshi currency
@@ -107,28 +107,5 @@ int main() {
     cout << "Total Amount earn From Utility Bill: \u09F3" << Uty * n << endl;
     cout << "Total Amount earn From Khala Bill: \u09F3" << ToKhalaBi << endl;
     cout << "Total Amount earn From Mess Member: \u09F3" << TotalAmount << endl;
-
-
-
-
-
-    /*double Person1 = IndiBazar[0] - (IndiMeal[0] * MealRate);
-    cout << "Amount have to give for Person1 = " << Person1 << endl;
-
-    double Person2 = IndiBazar[1] - (IndiMeal[1] * MealRate);
-    cout << "Amount have to give for Person2 = " << Person2 << endl;
-
-    double Person3 = IndiBazar[2] - (IndiMeal[2] * MealRate);
-    cout << "Amount have to give for Person3 = " << Person3 << endl;
-
-    double Person4 = IndiBazar[3] - (IndiMeal[3] * MealRate);
-    cout << "Amount have to give for Person4 = " << Person4 << endl;
-
-    double Person5 = IndiBazar[4] - (IndiMeal[4] * MealRate);
-    cout << "Amount have to give for Person5 = " << Person5 << endl;
-
-    double Person6 = IndiBazar[5] - (IndiMeal[5] * MealRate);
-    cout << "Amount have to give for Person6 = " << Person6 << endl;*/
-
 
 }
